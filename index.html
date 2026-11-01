@@ -1,740 +1,274 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anshika Singh | Business Intelligence Analyst Portfolio</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#ecfeff',
-                            100: '#cffafe',
-                            400: '#22d3ee',
-                            500: '#06b6d4',
-                            600: '#0891b2',
-                            900: '#164e63',
-                        },
-                        darkbg: '#0f172a',
-                        cardbg: '#1e293b',
-                    }
-                }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anshika Singh | Business Intelligence Analyst Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfeff',
+              100: '#cffafe',
+              500: '#06b6d4',
+              600: '#0891b2',
+              900: '#164e63',
+              dark: '#0B1120',
+              card: '#1E293B',
+              border: '#334155'
             }
+          }
         }
-    </script>
-    <!-- Lucide Icons & FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .glass-card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glow-effect {
-            box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
-        }
-        .glow-effect:hover {
-            box-shadow: 0 0 35px 0px rgba(6, 182, 212, 0.45);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #38bdf8 0%, #22d3ee 50%, #818cf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0B1120;
+      color: #F8FAFC;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-darkbg text-slate-100 antialiased selection:bg-cyan-500 selection:text-white">
+<body class="antialiased selection:bg-cyan-500 selection:text-black">
 
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a href="#hero" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                    <span class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white text-sm font-extrabold shadow-md">AS</span>
-                    <span>Anshika<span class="text-cyan-400">.bi</span></span>
-                </a>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="#about" class="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
-                    <a href="#skills" class="text-slate-300 hover:text-cyan-400 transition-colors">Skills</a>
-                    <a href="#project" class="text-slate-300 hover:text-cyan-400 transition-colors">Featured Project</a>
-                    <a href="#certifications" class="text-slate-300 hover:text-cyan-400 transition-colors">Certifications</a>
-                    <a href="#education" class="text-slate-300 hover:text-cyan-400 transition-colors">Education</a>
-                    <a href="#contact" class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-all shadow-md shadow-cyan-500/20">Contact Me</a>
-                </div>
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-brand-dark/80 border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <span class="text-xl font-bold tracking-tight text-white">Anshika<span class="text-cyan-400">.BI</span></span>
+      <div class="flex space-x-6 text-sm font-medium">
+        <a href="#about" class="text-slate-300 hover:text-cyan-400 transition">About</a>
+        <a href="#skills" class="text-slate-300 hover:text-cyan-400 transition">Skills</a>
+        <a href="#project" class="text-slate-300 hover:text-cyan-400 transition">Project</a>
+        <a href="#education" class="text-slate-300 hover:text-cyan-400 transition">Education</a>
+      </div>
+    </div>
+  </nav>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
-            </div>
+  <!-- Hero Section -->
+  <header id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="flex flex-col md:flex-row items-start justify-between gap-10">
+      <div class="space-y-6 max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950 text-cyan-300 border border-cyan-800">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          BI Analyst & AI-Assisted Analytics
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-200">Anshika Singh</span>
+        </h1>
+        <p class="text-lg text-slate-300 leading-relaxed">
+          Business Intelligence Analyst focused on building Power BI dashboards, DAX metrics modeling, and SQL database analysis. Skilled in leveraging Generative AI tools like Copilot in Power BI to streamline data reporting, design business KPIs, and deliver actionable executive insights.
+        </p>
+
+        <!-- Quick Contacts -->
+        <div class="flex flex-wrap gap-4 text-sm text-slate-300 pt-2">
+          <span class="flex items-center gap-2"><i class="fas fa-location-dot text-cyan-400"></i> Kanpur, India</span>
+          <span class="flex items-center gap-2"><i class="fas fa-graduation-cap text-cyan-400"></i> PSIT Kanpur (Batch 2024–2028)</span>
+          <span class="flex items-center gap-2"><i class="fas fa-star text-cyan-400"></i> CGPA: 8.5 / 10</span>
         </div>
 
-        <!-- Mobile Navigation Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
-            <a href="#about" class="block py-2 text-slate-300 hover:text-cyan-400">About</a>
-            <a href="#skills" class="block py-2 text-slate-300 hover:text-cyan-400">Skills</a>
-            <a href="#project" class="block py-2 text-slate-300 hover:text-cyan-400">Featured Project</a>
-            <a href="#certifications" class="block py-2 text-slate-300 hover:text-cyan-400">Certifications</a>
-            <a href="#education" class="block py-2 text-slate-300 hover:text-cyan-400">Education</a>
-            <a href="#contact" class="block py-2.5 text-center rounded-lg bg-cyan-500 text-slate-950 font-semibold">Contact Me</a>
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a href="https://linkedin.com/in/anshika-singh-41bba1438" target="_blank" class="px-5 py-2.5 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition inline-flex items-center gap-2">
+            <i class="fab font-bold fa-linkedin"></i> LinkedIn Profile
+          </a>
+          <a href="https://github.com/anshikasinghrs15062007-crypto" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-800 border border-brand-border text-slate-200 hover:border-cyan-500 transition inline-flex items-center gap-2">
+            <i class="fab fa-github"></i> GitHub Repositories
+          </a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-        <!-- Background Light Glows -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute top-1/3 right-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- Technical Skills Section -->
+  <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-brand-border">
+    <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+      <i class="fas fa-chart-column text-cyan-400"></i> Core Competencies & Skills
+    </h2>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-7 text-left space-y-6">
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-medium tracking-wide">
-                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                        Available for Entry-Level BI & AI Analyst Roles
-                    </div>
-
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-none">
-                        Hi, I'm <span class="gradient-text">Anshika Singh</span>
-                    </h1>
-
-                    <p class="text-xl sm:text-2xl font-semibold text-slate-300">
-                        Business Intelligence Analyst &amp; AI-Assisted Data Enthusiast
-                    </p>
-
-                    <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
-                        Transforming complex raw metrics into automated visual dashboards, data models, and strategic AI-generated recommendations to drive business growth.
-                    </p>
-
-                    <div class="flex flex-wrap items-center gap-4 pt-2">
-                        <span class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-md border border-slate-700">
-                            <i class="fa-solid fa-location-dot text-cyan-400"></i> Kanpur, India
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-md border border-slate-700">
-                            <i class="fa-solid fa-graduation-cap text-cyan-400"></i> PSIT Kanpur (CGPA: 8.5)
-                        </span>
-                    </div>
-
-                    <div class="flex flex-wrap items-center gap-4 pt-4">
-                        <a href="#project" class="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-all shadow-lg shadow-cyan-500/25 flex items-center gap-2">
-                            <span>View Projects</span>
-                            <i class="fa-solid fa-arrow-down text-xs"></i>
-                        </a>
-                        <a href="#contact" class="px-6 py-3 rounded-lg border border-slate-700 hover:border-cyan-500/50 bg-slate-900/50 hover:bg-slate-800 text-slate-200 font-semibold transition-all">
-                            Contact Me
-                        </a>
-                    </div>
-
-                    <!-- External Profiles -->
-                    <div class="flex items-center gap-4 pt-4 text-slate-400">
-                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Connect:</span>
-                        <a href="https://www.linkedin.com/in/anshika-singh-41bba1438" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-400 border border-slate-700 flex items-center justify-center transition-all">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/anshikasinghrs15062007-crypto" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-400 border border-slate-700 flex items-center justify-center transition-all">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://business-health-analyzer-project.vercel.app" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-400 border border-slate-700 flex items-center justify-center transition-all" title="Live Project App">
-                            <i class="fa-solid fa-globe"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Hero Interactive Graphic / Quick Metric Cards -->
-                <div class="lg:col-span-5">
-                    <div class="glass-card p-6 rounded-2xl glow-effect space-y-4 border border-slate-800">
-                        <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                            </div>
-                            <span class="text-xs font-mono text-cyan-400">BI_Executive_Summary.dax</span>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
-                                <p class="text-xs text-slate-400 font-medium">Core Stack</p>
-                                <p class="text-base font-bold text-cyan-300 mt-1">Power BI &amp; SQL</p>
-                                <span class="text-[10px] text-slate-500">DAX / Power Query</span>
-                            </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
-                                <p class="text-xs text-slate-400 font-medium">GenAI Copilots</p>
-                                <p class="text-base font-bold text-indigo-300 mt-1">Claude &amp; Copilot</p>
-                                <span class="text-[10px] text-slate-500">AI Recommendations</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-2">
-                            <div class="flex justify-between items-center text-xs">
-                                <span class="text-slate-400">Projected Margin Health</span>
-                                <span class="text-emerald-400 font-bold">+24.8%</span>
-                            </div>
-                            <div class="w-full bg-slate-800 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-cyan-500 to-emerald-400 h-2 rounded-full w-[78%]"></div>
-                            </div>
-                        </div>
-
-                        <div class="p-3 bg-cyan-950/40 rounded-xl border border-cyan-500/20 text-xs text-cyan-200 flex items-start gap-2">
-                            <i class="fa-solid fa-sparkles text-cyan-400 mt-0.5"></i>
-                            <p><strong>AI-Assisted Insight:</strong> Automated KPI analysis flagged 12% cost optimization across secondary business units.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Skill Card 1 -->
+      <div class="p-6 rounded-xl bg-brand-card border border-brand-border space-y-4">
+        <div class="p-3 bg-cyan-950/60 rounded-lg w-fit text-cyan-400 text-xl">
+          <i class="fas fa-chart-line"></i>
         </div>
-    </section>
+        <h3 class="text-lg font-bold text-white">Business Intelligence & Viz</h3>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> Power BI & Power Query</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> Interactive Dashboard Design</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> KPI Design & Tracking</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> Advanced Excel (PivotTables, Formulas)</li>
+        </ul>
+      </div>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-20 bg-slate-900/50 border-t border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-4">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-cyan-400">Background &amp; Focus</h2>
-                <p class="text-3xl font-extrabold text-white">Engineering Data into Actionable Intelligence</p>
-            </div>
-
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-all">
-                    <div class="w-12 h-12 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl font-bold mb-4">
-                        <i class="fa-solid fa-chart-pie"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">BI &amp; Dashboard Design</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Second-year B.Tech student at PSIT Kanpur (CGPA 8.5/10). Skilled in constructing relational data models, star schemas, and interactive Power BI reports.
-                    </p>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-all">
-                    <div class="w-12 h-12 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl font-bold mb-4">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Generative AI Integration</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Hands-on experience embedding Copilot and Claude API pipelines to convert computed DAX KPIs into automated written business summaries.
-                    </p>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-all">
-                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl font-bold mb-4">
-                        <i class="fa-solid fa-database"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">SQL &amp; Data Warehousing</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Proficient in SQL querying, table joins, data aggregations, Power Query ETL processes, and advanced Excel modeling for accurate business insights.
-                    </p>
-                </div>
-            </div>
+      <!-- Skill Card 2 -->
+      <div class="p-6 rounded-xl bg-brand-card border border-brand-border space-y-4">
+        <div class="p-3 bg-cyan-950/60 rounded-lg w-fit text-cyan-400 text-xl">
+          <i class="fas fa-database"></i>
         </div>
-    </section>
+        <h3 class="text-lg font-bold text-white">Data Architecture & Modeling</h3>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> SQL (Queries, Joins, Aggregations)</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> DAX (Calculated Columns & Measures)</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> Data Warehousing Concepts</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> Data Modeling (Star Schema)</li>
+        </ul>
+      </div>
 
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <h2 class="text-xs font-bold uppercase tracking-widest text-cyan-400">Technical Expertise</h2>
-                    <p class="text-3xl font-extrabold text-white mt-1">Core Competencies &amp; Toolkit</p>
-                </div>
-                <!-- Interactive Filter Tabs -->
-                <div class="mt-4 md:mt-0 flex flex-wrap gap-2" id="skill-filter-buttons">
-                    <button data-filter="all" class="filter-btn active px-3.5 py-1.5 rounded-lg bg-cyan-500 text-slate-950 font-semibold text-xs transition-all">All Skills</button>
-                    <button data-filter="bi" class="filter-btn px-3.5 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs transition-all">BI &amp; Visualization</button>
-                    <button data-filter="data" class="filter-btn px-3.5 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs transition-all">SQL &amp; Web Stack</button>
-                    <button data-filter="ai" class="filter-btn px-3.5 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs transition-all">GenAI &amp; Stats</button>
-                </div>
-            </div>
-
-            <!-- Skills Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="skills-grid">
-                
-                <!-- Skill 1 -->
-                <div class="skill-card glass-card p-6 rounded-xl border border-slate-800" data-category="bi">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="p-2 rounded-lg bg-amber-500/10 text-amber-400"><i class="fa-solid fa-chart-column text-lg"></i></span>
-                        <h4 class="font-bold text-white">Power BI &amp; Reports</h4>
-                    </div>
-                    <p class="text-xs text-slate-400">Designing executive dashboards, dynamic visual reporting, custom KPI cards, and cross-filtering layouts.</p>
-                </div>
-
-                <!-- Skill 2 -->
-                <div class="skill-card glass-card p-6 rounded-xl border border-slate-800" data-category="bi">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400"><i class="fa-solid fa-calculator text-lg"></i></span>
-                        <h4 class="font-bold text-white">DAX &amp; Power Query</h4>
-                    </div>
-                    <p class="text-xs text-slate-400">Data Analysis Expressions (DAX) measures, calculated columns, time intelligence functions, and ETL data transformation.</p>
-                </div>
-
-                <!-- Skill 3 -->
-                <div class="skill-card glass-card p-6 rounded-xl border border-slate-800" data-category="data">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="p-2 rounded-lg bg-blue-500/10 text-blue-400"><i class="fa-solid fa-database text-lg"></i></span>
-                        <h4 class="font-bold text-white">SQL Data Querying</h4>
-                    </div>
-                    <p class="text-xs text-slate-400">Relational databases, complex queries, multi-table JOINs, subqueries, group aggregations, and data filtering.</p>
-                </div>
-
-                <!-- Skill 4 -->
-                <div class="skill-card glass-card p-6 rounded-xl border border-slate-800" data-category="data">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400"><i class="fa-solid fa-file-excel text-lg"></i></span>
-                        <h4 class="font-bold text-white">Advanced Excel</h4>
-                    </div>
-                    <p class="text-xs text-slate-400">Pivot Tables, PivotCharts, VLOOKUP/XLOOKUP, nested conditional logic formulas, and financial summary modeling.</p>
-                </div>
-
-                <!-- Skill 5 -->
-                <div class="skill-card glass-card p-6 rounded-xl border border-slate-800" data-category="ai">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400"><i class="fa-solid fa-brain text-lg"></i></span>
-                        <h4 class="font-bold text-white">Copilot &amp; Claude API</h4>
-                    </div>
-                    <p class="text-xs text-slate-400">Integrating LLM API endpoints (Claude) and Copilot in Power BI to automate business insights and executive summaries.</p>
-                </div>
-
-                <!-- Skill 6 -->
-                <div class="skill-card glass-card p-6 rounded-xl border border-slate-800" data-category="bi">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="p-2 rounded-lg bg-purple-500/10 text-purple-400"><i class="fa-solid fa-diagram-project text-lg"></i></span>
-                        <h4 class="font-bold text-white">Data Modeling (Star Schema)</h4>
-                    </div>
-                    <p class="text-xs text-slate-400">Designing dimension/fact tables, star schemas, snowflake schemas, and managing relationship cardinality.</p>
-                </div>
-
-                <!-- Skill 7 -->
-                <div class="skill-card glass-card p-6 rounded-xl border border-slate-800" data-category="data">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="p-2 rounded-lg bg-sky-500/10 text-sky-400"><i class="fa-solid fa-code text-lg"></i></span>
-                        <h4 class="font-bold text-white">Frontend Web Stack</h4>
-                    </div>
-                    <p class="text-xs text-slate-400">HTML5, CSS3, Tailwind CSS, JavaScript, and TypeScript for building dynamic analytical web applications.</p>
-                </div>
-
-                <!-- Skill 8 -->
-                <div class="skill-card glass-card p-6 rounded-xl border border-slate-800" data-category="ai">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="p-2 rounded-lg bg-rose-500/10 text-rose-400"><i class="fa-solid fa-chart-line text-lg"></i></span>
-                        <h4 class="font-bold text-white">Business Statistics</h4>
-                    </div>
-                    <p class="text-xs text-slate-400">Descriptive metrics, variance analysis, trend projection, statistical fundamentals, and performance KPI design.</p>
-                </div>
-
-                <!-- Skill 9 -->
-                <div class="skill-card glass-card p-6 rounded-xl border border-slate-800" data-category="ai">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="p-2 rounded-lg bg-teal-500/10 text-teal-400"><i class="fa-solid fa-wand-magic-sparkles text-lg"></i></span>
-                        <h4 class="font-bold text-white">Prompt Engineering</h4>
-                    </div>
-                    <p class="text-xs text-slate-400">Crafting targeted prompt templates to extract structured analytical insights and summary narratives from LLMs.</p>
-                </div>
-
-            </div>
+      <!-- Skill Card 3 -->
+      <div class="p-6 rounded-xl bg-brand-card border border-brand-border space-y-4">
+        <div class="p-3 bg-cyan-950/60 rounded-lg w-fit text-cyan-400 text-xl">
+          <i class="fas fa-robot"></i>
         </div>
-    </section>
+        <h3 class="text-lg font-bold text-white">AI-Assisted Analytics</h3>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> Copilot in Power BI</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> Business Statistics</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> Prompt Engineering for Analytics</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400 text-xs"></i> Automated Insight Generation</li>
+        </ul>
+      </div>
 
-    <!-- FEATURED PROJECT SPOTLIGHT -->
-    <section id="project" class="py-20 bg-slate-900/60 border-t border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center gap-3 mb-2">
-                <span class="px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-wider">Flagship Application</span>
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Business Health Analyzer</h2>
-            <p class="text-slate-400 mt-2 max-w-2xl text-sm sm:text-base">
-                An end-to-end interactive Business Intelligence tool engineered to analyze organizational revenue, cost metrics, and profitability across business units with automated AI written executive recommendations.
-            </p>
+    </div>
+  </section>
 
-            <div class="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Left: Architecture & Details -->
-                <div class="lg:col-span-6 space-y-6">
-                    <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-4">
-                        <h3 class="text-lg font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-layer-group text-cyan-400"></i> Project Architecture &amp; Key Features
-                        </h3>
-                        <ul class="space-y-3 text-sm text-slate-300">
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
-                                <span><strong>Multi-Table Relational Data Model:</strong> Built structured database schemas utilizing SQL queries, JOINs, aggregations, and data filters.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
-                                <span><strong>Power BI DAX Measures:</strong> Implemented calculated revenue, gross profit, margin percentages, and operational expense metrics.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
-                                <span><strong>Frontend Stack:</strong> Crafted dynamic UI with HTML5, CSS3 (Tailwind), JavaScript, and TypeScript.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
-                                <span><strong>Embedded Claude API Engine:</strong> Integrated AI pipeline to convert raw KPI figures into validated executive summary insights.</span>
-                            </li>
-                        </ul>
+  <!-- Key Project Section -->
+  <section id="project" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-brand-border">
+    <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+      <i class="fas fa-diagram-project text-cyan-400"></i> Featured Analytics Project
+    </h2>
 
-                        <div class="pt-4 flex flex-wrap items-center gap-4 border-t border-slate-800">
-                            <a href="https://business-health-analyzer-project.vercel.app" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-all shadow-md shadow-cyan-500/20 flex items-center gap-2">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                <span>Launch Live Application</span>
-                            </a>
-                            <a href="https://github.com/anshikasinghrs15062007-crypto/Business-Health-Analyzer-Project" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-all border border-slate-700 flex items-center gap-2">
-                                <i class="fa-brands fa-github"></i>
-                                <span>Repository</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right: Interactive Live Simulation Card -->
-                <div class="lg:col-span-6">
-                    <div class="glass-card p-6 rounded-2xl border border-slate-800 glow-effect space-y-5">
-                        <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                            <div>
-                                <span class="text-xs font-bold text-slate-400 uppercase">Interactive Metric Simulator</span>
-                                <h4 class="text-base font-bold text-white">Business Unit Health Monitor</h4>
-                            </div>
-                            <span class="px-2 py-1 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-mono border border-emerald-500/20">LIVE DAX DEMO</span>
-                        </div>
-
-                        <!-- Simulator Controls -->
-                        <div class="space-y-4 text-xs">
-                            <div>
-                                <div class="flex justify-between mb-1 text-slate-300">
-                                    <span>Quarterly Revenue ($)</span>
-                                    <span id="rev-val" class="font-mono text-cyan-400 font-bold">$450,000</span>
-                                </div>
-                                <input type="range" id="rev-slider" min="100000" max="1000000" step="25000" value="450000" class="w-full accent-cyan-400 cursor-pointer">
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1 text-slate-300">
-                                    <span>Operational Cost ($)</span>
-                                    <span id="cost-val" class="font-mono text-rose-400 font-bold">$310,000</span>
-                                </div>
-                                <input type="range" id="cost-slider" min="50000" max="900000" step="25000" value="310000" class="w-full accent-rose-400 cursor-pointer">
-                            </div>
-                        </div>
-
-                        <!-- Computed KPI Metrics -->
-                        <div class="grid grid-cols-2 gap-3 pt-2">
-                            <div class="bg-slate-900/90 p-3 rounded-lg border border-slate-800">
-                                <span class="text-[10px] uppercase text-slate-400 font-semibold">Gross Profit</span>
-                                <p id="kpi-profit" class="text-lg font-bold text-emerald-400">$140,000</p>
-                            </div>
-                            <div class="bg-slate-900/90 p-3 rounded-lg border border-slate-800">
-                                <span class="text-[10px] uppercase text-slate-400 font-semibold">Net Profit Margin</span>
-                                <p id="kpi-margin" class="text-lg font-bold text-cyan-400">31.1%</p>
-                            </div>
-                        </div>
-
-                        <!-- Simulated Claude API Output -->
-                        <div class="p-3.5 bg-slate-900 rounded-xl border border-slate-800 space-y-1">
-                            <div class="flex items-center gap-1.5 text-[11px] font-semibold text-indigo-300">
-                                <i class="fa-solid fa-sparkles text-indigo-400"></i>
-                                <span>Claude API Executive Recommendation:</span>
-                            </div>
-                            <p id="ai-recommendation" class="text-xs text-slate-300 leading-relaxed italic">
-                                "Healthy margin performance at 31.1%. Reinvest operational surplus into primary acquisition channels."
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <div class="p-8 rounded-xl bg-brand-card border border-brand-border space-y-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <h3 class="text-2xl font-bold text-white">Business Health Analyzer</h3>
+          <p class="text-cyan-400 text-sm font-medium mt-1">BI & Financial Performance Tracking Dashboard</p>
         </div>
-    </section>
-
-    <!-- CERTIFICATIONS SHOWCASE -->
-    <section id="certifications" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-3 mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-cyan-400">Verified Credentials</h2>
-                <p class="text-3xl font-extrabold text-white">Certifications &amp; Professional Specializations</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <!-- Cert 1 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-all flex gap-4">
-                    <div class="w-12 h-12 rounded-lg bg-blue-600/10 text-blue-400 flex-shrink-0 flex items-center justify-center text-xl font-bold">
-                        <i class="fa-solid fa-building-columns"></i>
-                    </div>
-                    <div>
-                        <span class="text-xs font-semibold text-cyan-400">Tata (via Forage)</span>
-                        <h3 class="text-base font-bold text-white mt-0.5">Data Visualisation: Empowering Business with Insights</h3>
-                        <p class="text-xs text-slate-400 mt-2">Framing business scenarios, visual selection principles, effective visual styling, and communicating visual data analysis to stakeholders.</p>
-                    </div>
-                </div>
-
-                <!-- Cert 2 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-all flex gap-4">
-                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 text-blue-400 flex-shrink-0 flex items-center justify-center text-xl font-bold">
-                        <i class="fa-brands fa-microsoft"></i>
-                    </div>
-                    <div>
-                        <span class="text-xs font-semibold text-cyan-400">Microsoft</span>
-                        <h3 class="text-base font-bold text-white mt-0.5">Get Started with Copilot in Power BI</h3>
-                        <p class="text-xs text-slate-400 mt-2">AI-driven insight generation, natural language DAX querying, and automated report building inside Microsoft Power BI.</p>
-                    </div>
-                </div>
-
-                <!-- Cert 3 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-all flex gap-4">
-                    <div class="w-12 h-12 rounded-lg bg-cyan-500/10 text-cyan-400 flex-shrink-0 flex items-center justify-center text-xl font-bold">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-                    <div>
-                        <span class="text-xs font-semibold text-cyan-400">IBM (via Coursera)</span>
-                        <h3 class="text-base font-bold text-white mt-0.5">Generative AI Fundamentals Specialization</h3>
-                        <p class="text-xs text-slate-400 mt-2">Prompt engineering techniques, foundation models, watsonx platform, and applying GenAI to business transformation.</p>
-                    </div>
-                </div>
-
-                <!-- Cert 4 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-all flex gap-4">
-                    <div class="w-12 h-12 rounded-lg bg-emerald-500/10 text-emerald-400 flex-shrink-0 flex items-center justify-center text-xl font-bold">
-                        <i class="fa-solid fa-database"></i>
-                    </div>
-                    <div>
-                        <span class="text-xs font-semibold text-cyan-400">HackerRank</span>
-                        <h3 class="text-base font-bold text-white mt-0.5">SQL (Basic) Certification</h3>
-                        <p class="text-xs text-slate-400 mt-2">Relational database query structure, multi-table JOIN operations, conditional aggregations, and data filtering.</p>
-                    </div>
-                </div>
-
-            </div>
+        <div class="flex gap-3">
+          <a href="https://business-health-analyzer-project.vercel.app" target="_blank" class="px-4 py-2 bg-cyan-500 text-slate-950 text-sm font-bold rounded-lg hover:bg-cyan-400 transition inline-flex items-center gap-2">
+            <i class="fas fa-external-link-alt"></i> Live App
+          </a>
+          <a href="https://github.com/anshikasinghrs15062007-crypto/Business-Health-Analyzer-Project" target="_blank" class="px-4 py-2 bg-slate-800 border border-brand-border text-slate-200 text-sm font-bold rounded-lg hover:border-cyan-400 transition inline-flex items-center gap-2">
+            <i class="fab fa-github"></i> Repository
+          </a>
         </div>
-    </section>
+      </div>
 
-    <!-- EDUCATION SECTION -->
-    <section id="education" class="py-20 bg-slate-900/50 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-3 mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-cyan-400">Academic Roadmap</h2>
-                <p class="text-3xl font-extrabold text-white">Education &amp; Qualifications</p>
-            </div>
-
-            <div class="max-w-3xl mx-auto space-y-6">
-                
-                <!-- Education Item 1 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 relative pl-8 border-l-4 border-l-cyan-400">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                        <div>
-                            <h3 class="text-lg font-bold text-white">Bachelor of Technology (B.Tech)</h3>
-                            <p class="text-sm font-semibold text-cyan-400">Pranveer Singh Institute of Technology (PSIT), Kanpur</p>
-                        </div>
-                        <div class="text-left sm:text-right">
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-mono">2024 – 2028</span>
-                            <p class="text-xs text-emerald-400 font-bold mt-1">CGPA: 8.5 / 10</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education Item 2 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 relative pl-8 border-l-4 border-l-blue-500">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                        <div>
-                            <h3 class="text-base font-bold text-white">Class 12 (CBSE Board)</h3>
-                            <p class="text-sm font-medium text-slate-400">Prithviraj Chauhan Education Center, Kanpur</p>
-                        </div>
-                        <div class="text-left sm:text-right">
-                            <p class="text-xs text-slate-300 font-bold">Score: 65%</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education Item 3 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 relative pl-8 border-l-4 border-l-indigo-500">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                        <div>
-                            <h3 class="text-base font-bold text-white">Class 10 (CBSE Board)</h3>
-                            <p class="text-sm font-medium text-slate-400">Dr. Virendra Swarup Education Center, Kanpur</p>
-                        </div>
-                        <div class="text-left sm:text-right">
-                            <p class="text-xs text-emerald-400 font-bold">Score: 89%</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="space-y-3">
+          <h4 class="text-sm font-semibold text-slate-200 uppercase tracking-wider">Project Highlights</h4>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-angle-right text-cyan-400 mt-1"></i>
+              <span>Assesses operating health by evaluating revenue, cost, and profitability KPIs across business units.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-angle-right text-cyan-400 mt-1"></i>
+              <span>Designed multi-table relational schema using SQL to query, join, filter, and aggregate underlying metrics.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-angle-right text-cyan-400 mt-1"></i>
+              <span>Implemented dynamic profit-margin KPIs using DAX measures validated against source metrics.</span>
+            </li>
+          </ul>
         </div>
-    </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto glass-card p-8 sm:p-12 rounded-2xl border border-slate-800 glow-effect">
-                <div class="text-center space-y-3 mb-8">
-                    <h2 class="text-xs font-bold uppercase tracking-widest text-cyan-400">Get In Touch</h2>
-                    <p class="text-3xl font-extrabold text-white">Let's Connect &amp; Collaborate</p>
-                    <p class="text-slate-400 text-sm max-w-lg mx-auto">
-                        Looking for an entry-level Business Intelligence / AI Analyst internship or role? Feel free to send a message or contact directly.
-                    </p>
-                </div>
+        <div class="space-y-3">
+          <h4 class="text-sm font-semibold text-slate-200 uppercase tracking-wider">Technical Implementation</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-slate-900 text-cyan-300 text-xs font-semibold rounded border border-brand-border">Power BI</span>
+            <span class="px-3 py-1 bg-slate-900 text-cyan-300 text-xs font-semibold rounded border border-brand-border">DAX</span>
+            <span class="px-3 py-1 bg-slate-900 text-cyan-300 text-xs font-semibold rounded border border-brand-border">SQL</span>
+            <span class="px-3 py-1 bg-slate-900 text-cyan-300 text-xs font-semibold rounded border border-brand-border">Power Query</span>
+            <span class="px-3 py-1 bg-slate-900 text-cyan-300 text-xs font-semibold rounded border border-brand-border">Data Warehousing</span>
+            <span class="px-3 py-1 bg-slate-900 text-cyan-300 text-xs font-semibold rounded border border-brand-border">KPI Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    
-                    <!-- Direct Details -->
-                    <div class="space-y-4 text-sm">
-                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-slate-400">Primary Email</span>
-                                <p class="text-slate-200 font-semibold select-all">anshikasinghrs15062007@gmail.com</p>
-                            </div>
-                        </div>
+  <!-- Certifications & Education Section -->
+  <section id="education" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-brand-border mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <!-- Certifications -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+          <i class="fas fa-certificate text-cyan-400"></i> Certifications
+        </h2>
+        
+        <div class="space-y-4">
+          <div class="p-4 rounded-lg bg-brand-card border border-brand-border">
+            <h3 class="font-bold text-white">Data Visualisation: Empowering Business with Insights</h3>
+            <p class="text-xs text-cyan-400">Tata (via Forage)</p>
+          </div>
+          <div class="p-4 rounded-lg bg-brand-card border border-brand-border">
+            <h3 class="font-bold text-white">Generative AI Fundamentals Specialization</h3>
+            <p class="text-xs text-cyan-400">IBM (via Coursera)</p>
+          </div>
+          <div class="p-4 rounded-lg bg-brand-card border border-brand-border">
+            <h3 class="font-bold text-white">SQL (Basic) Certification</h3>
+            <p class="text-xs text-cyan-400">HackerRank</p>
+          </div>
+          <div class="p-4 rounded-lg bg-brand-card border border-brand-border">
+            <h3 class="font-bold text-white">Get Started with Copilot in Power BI</h3>
+            <p class="text-xs text-cyan-400">Microsoft</p>
+          </div>
+        </div>
+      </div>
 
-                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-slate-400">Mobile Phone</span>
-                                <p class="text-slate-200 font-semibold">+91 7705800916</p>
-                            </div>
-                        </div>
+      <!-- Education -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+          <i class="fas fa-graduation-cap text-cyan-400"></i> Education
+        </h2>
 
-                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-slate-400">Location</span>
-                                <p class="text-slate-200 font-semibold">Kanpur, Uttar Pradesh, India</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Interactive Quick Form -->
-                    <form id="contact-form" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-1">Your Name</label>
-                            <input type="text" required placeholder="e.g. John Doe" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-cyan-400 transition-colors">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-1">Your Email</label>
-                            <input type="email" required placeholder="name@company.com" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-cyan-400 transition-colors">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-1">Message</label>
-                            <textarea rows="3" required placeholder="Let's discuss BI opportunities..." class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-cyan-400 transition-colors"></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-cyan-500/20">
-                            Send Message
-                        </button>
-                    </form>
-
-                </div>
+        <div class="space-y-4">
+          <div class="p-4 rounded-lg bg-brand-card border border-brand-border">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-bold text-white">B.Tech</h3>
+                <p class="text-xs text-slate-300">Pranveer Singh Institute of Technology (PSIT), Kanpur</p>
+              </div>
+              <span class="text-xs font-semibold text-cyan-400 bg-cyan-950 px-2 py-1 rounded">2024–2028</span>
             </div>
+            <p class="text-xs text-slate-400 mt-2">First-year CGPA: 8.5 / 10</p>
+          </div>
+
+          <div class="p-4 rounded-lg bg-brand-card border border-brand-border">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-bold text-white">Class 12 (CBSE Board)</h3>
+                <p class="text-xs text-slate-300">Prithviraj Chauhan Education Center, Kanpur</p>
+              </div>
+              <span class="text-xs font-semibold text-slate-400 bg-slate-900 px-2 py-1 rounded">65%</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-lg bg-brand-card border border-brand-border">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-bold text-white">Class 10 (CBSE Board)</h3>
+                <p class="text-xs text-slate-300">Dr. Virendra Swarup Education Center, Kanpur</p>
+              </div>
+              <span class="text-xs font-semibold text-slate-400 bg-slate-900 px-2 py-1 rounded">89%</span>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- FOOTER -->
-    <footer class="py-8 bg-slate-950 border-t border-slate-800 text-center text-slate-500 text-xs">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>© 2026 Anshika Singh. All rights reserved.</p>
-            <p>Designed for Business Intelligence &amp; Data Visualization</p>
-        </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
-    <script>
-        // Mobile Navigation Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+  <!-- Footer -->
+  <footer class="border-t border-brand-border py-8 text-center text-xs text-slate-400">
+    <p>© 2026 Anshika Singh — Business Intelligence Analyst</p>
+  </footer>
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close menu on link click
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Skills Filter Logic
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const skillCards = document.querySelectorAll('.skill-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => {
-                    b.classList.remove('bg-cyan-500', 'text-slate-950');
-                    b.classList.add('bg-slate-800', 'text-slate-300');
-                });
-                btn.classList.removeAttribute('class');
-                btn.className = 'filter-btn active px-3.5 py-1.5 rounded-lg bg-cyan-500 text-slate-950 font-semibold text-xs transition-all';
-
-                const filter = btn.getAttribute('data-filter');
-
-                skillCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Live Business Health Metric Simulator
-        const revSlider = document.getElementById('rev-slider');
-        const costSlider = document.getElementById('cost-slider');
-        const revVal = document.getElementById('rev-val');
-        const costVal = document.getElementById('cost-val');
-        const kpiProfit = document.getElementById('kpi-profit');
-        const kpiMargin = document.getElementById('kpi-margin');
-        const aiRec = document.getElementById('ai-recommendation');
-
-        function updateSimulation() {
-            const rev = parseInt(revSlider.value);
-            const cost = parseInt(costSlider.value);
-            const profit = rev - cost;
-            const margin = ((profit / rev) * 100).toFixed(1);
-
-            revVal.textContent = `$${rev.toLocaleString()}`;
-            costVal.textContent = `$${cost.toLocaleString()}`;
-            kpiProfit.textContent = `$${profit.toLocaleString()}`;
-            kpiMargin.textContent = `${margin}%`;
-
-            if (profit < 0) {
-                kpiProfit.className = 'text-lg font-bold text-rose-500';
-                kpiMargin.className = 'text-lg font-bold text-rose-500';
-                aiRec.textContent = `"WARNING: Operating at a net loss of $${Math.abs(profit).toLocaleString()} (${margin}% margin). Recommend immediate reduction in non-essential operational expenses."`;
-            } else if (margin < 15) {
-                kpiProfit.className = 'text-lg font-bold text-amber-400';
-                kpiMargin.className = 'text-lg font-bold text-amber-400';
-                aiRec.textContent = `"SLENDER MARGIN: Profit margin is low at ${margin}%. Review vendor agreements and optimize overhead costs."`;
-            } else {
-                kpiProfit.className = 'text-lg font-bold text-emerald-400';
-                kpiMargin.className = 'text-lg font-bold text-cyan-400';
-                aiRec.textContent = `"HEALTHY MARGIN: Strong profitability at ${margin}%. Reinvest operational surplus into growth channels."`;
-            }
-        }
-
-        revSlider.addEventListener('input', updateSimulation);
-        costSlider.addEventListener('input', updateSimulation);
-
-        // Contact Form Handler
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you! Your message has been sent to Anshika Singh.');
-            e.target.reset();
-        });
-    </script>
 </body>
 </html>
